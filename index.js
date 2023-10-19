@@ -48,8 +48,18 @@ document.querySelector(".weather").style.display="block";
 document.querySelector(".error").style.display="none";
 
 }}
-searchBtn=addEventListener("click",()=>{
+searchBtn.addEventListener("click",()=>{
     checkWeather(searchBoxx.value);
 })
-
-
+window.addEventListener('resize', function() {
+    var input = document.querySelector('.city-input');
+    if (window.innerWidth <= 400) {
+      input.setAttribute('placeholder', 'Enter city');
+    } else {
+      input.setAttribute('placeholder', 'Enter your city');
+    }
+  });
+  searchBoxx.addEventListener("keypress",function(e){
+    if(e.key=="Enter")
+    checkWeather(searchBoxx.value);
+  });
