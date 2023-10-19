@@ -118,9 +118,8 @@ body {
     row-gap: 20px;
 }
 .city-input::placeholder {
-  color: #999; /* Change the color of the placeholder text */
-  /* font-size: 14px; Change the font size of the placeholder text */
-  content: "Enter city"; /* Change the placeholder text */
+  
+  content: "Enter city"; 
 }
 
   
